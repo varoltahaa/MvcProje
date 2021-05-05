@@ -20,7 +20,11 @@ namespace Business.Concrete
             _categoryDal = categoryDal;
         }
 
-        
+        public void Add(Category category)
+        {
+            _categoryDal.Insert(category);
+        }
+
         public List<Category> GetList()
         {
            return _categoryDal.List();
