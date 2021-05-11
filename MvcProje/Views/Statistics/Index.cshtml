@@ -1,0 +1,31 @@
+﻿@using MvcProje.Controllers
+@model IEnumerable<StatisticsController>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+<br />
+
+<div style="background-color:cornflowerblue; padding:15px;">
+
+    Toplam Kategori Sayısı : <p>@Html.Partial("NumberOfCategories", @Model)</p>
+</div>
+<br />
+<div style="background-color:aquamarine; padding:15px;">
+    Yazılım Kategorisine Ait Başlık Sayısı
+</div>
+<br />
+<div style="background-color:aqua; padding:15px;">
+    Adında a harfi geçen yazar sayısı
+</div>
+<br />
+<div style="background-color:burlywood; padding:15px;">
+    En fazla başlığa ait kategori adı
+</div>
+<br />
+<div style="background-color:darkcyan; padding:15px;">
+    True false
+</div>
+
