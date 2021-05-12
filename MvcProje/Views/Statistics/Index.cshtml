@@ -5,27 +5,51 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>İstatistik</h2>
 <br />
 
-<div style="background-color:cornflowerblue; padding:15px;">
+<div class="card" style="width: 18rem; float:left; margin-left:10px; background-color:cornflowerblue; box-shadow:3px 3px 4px;">
+ 
+    <div class="card-body" style=" ">
+        <h2>@ViewBag.value2</h2>
+        <p class="card-text"><b>Toplam Kategori Sayısı</b></p>
+    </div>
+</div>
+<div class="card" style="width: 18rem; float:left; margin-left:10px; background-color:aquamarine; box-shadow:3px 3px 4px;">
 
-    Toplam Kategori Sayısı : <p>@Html.Partial("NumberOfCategories", @Model)</p>
+    <div class="card-body">
+        <h2>@ViewBag.value3</h2>
+        <p style="font-size:15px;" class="card-text"><b>Yazılım Kategorisine Ait Başlık Sayısı</b></p>
+    </div>
 </div>
-<br />
-<div style="background-color:aquamarine; padding:15px;">
-    Yazılım Kategorisine Ait Başlık Sayısı
+<div class="card" style="width: 18rem; float:left; margin-left:10px; background-color:burlywood; box-shadow:3px 3px 4px;">
+
+    <div class="card-body">
+        <h2>@ViewBag.value4</h2>
+        <p class="card-text"><b>Adında a harfi geçen yazar sayısı</b></p>
+    </div>
 </div>
-<br />
-<div style="background-color:aqua; padding:15px;">
-    Adında a harfi geçen yazar sayısı
+<div class="card" style="width: 18rem; float:left; margin-left:10px; background-color:darkcyan; box-shadow:3px 3px 4px;">
+
+    <div class="card-body">
+        <h2>@ViewBag.value5</h2>
+        <p class="card-text"><b>En fazla başlığa ait kategori adı</b></p>
+    </div>
 </div>
-<br />
-<div style="background-color:burlywood; padding:15px;">
-    En fazla başlığa ait kategori adı
+<div class="card" style="width: 18rem; float:left; margin-left:10px; background-color:darkgoldenrod; box-shadow:3px 3px 4px;">
+
+    <div class="card-body">
+        <h2>@ViewBag.value6</h2>
+        <p class="card-text"><b>Aktif Kategori Sayısı</b></p>
+    </div>
 </div>
-<br />
-<div style="background-color:darkcyan; padding:15px;">
-    True false
+<div class="card" style="width: 18rem; float:left; margin-left:10px; background-color:lightskyblue;  box-shadow:3px 3px 4px;">
+
+    <div class="card-body">
+        <h2>@ViewBag.value7</h2>
+        <p class="card-text"><b>Aktif Olmayan Kategori Sayısı</b></p>
+    </div>
 </div>
+
+
 
