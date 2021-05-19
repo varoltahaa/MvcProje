@@ -1,14 +1,17 @@
-﻿@model Entity.Concrete.Writer
+﻿@model Entity.Concrete.Writer 
 @{
-    ViewBag.Title = "Add";
+    ViewBag.Title = "Update";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h1>Yeni Yazar Ekleme</h1>
+<h2>Yazar Düzenleme Sayfası</h2>
 <br />
-@using (Html.BeginForm("Add", "Writer", FormMethod.Post))
-            {
+@using (Html.BeginForm("Update", "Writer", FormMethod.Post)) 
+{
 <div class="form-group">
+    @Html.Label("Yazar ID")
+    @Html.TextBoxFor(x => x.WriterId, new { @class = "form-control" })
+    <br />
     @Html.Label("Yazar Adı")
     @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.WriterName)
@@ -37,7 +40,7 @@
     @Html.TextAreaFor(x => x.WriterAbout, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.WriterAbout)
     <br />
-    <button class="btn btn-info">Yazar Ekle</button>
+    <button class="btn btn-success">Değişiklikleri Uygula</button>
 </div>
-            }
+ }
 

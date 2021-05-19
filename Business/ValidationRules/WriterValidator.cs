@@ -15,7 +15,9 @@ namespace Business.ValidationRules
             RuleFor(x => x.WriterName).NotEmpty().WithMessage("Yazar Adı Boş Olamaz !");
             RuleFor(x => x.WriterSurname).NotEmpty().WithMessage("Yazar Soyadı Boş Olamaz !");
             RuleFor(x => x.WriterAbout).NotEmpty().WithMessage("Hakkında Alanı Boş Olamaz!");
+            RuleFor(x => x.WriterTitle).NotEmpty().WithMessage("Ünvan Alanı Boş Olamaz!");
             RuleFor(x => x.WriterSurname).MaximumLength(50).WithMessage("Lütfen En Az 50 Karakter Giriş Yapın!");
+            RuleFor(x => x.WriterTitle).MaximumLength(50).WithMessage("Lütfen En Az 50 Karakter Giriş Yapın!");
         }
     }
 }

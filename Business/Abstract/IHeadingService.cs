@@ -10,7 +10,10 @@ namespace Business.Abstract
     public interface IHeadingService
     {
         List<Heading> GetList();
-
         Heading GetByCategoryId(int id);
+        Heading GeyById(int id);
+        void Add(Heading heading);
+        void Delete(Heading heading);
+        void Update(Heading heading);
     }
 }
